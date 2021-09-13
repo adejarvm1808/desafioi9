@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
-    "user": "adejar",
-    "password" : "15253545",
-    "database": "desafio_i9",
-    "host": "localhost",
+    "user": "b5d2134cd8e2d2",
+    "password" : "5bfdec39",
+    "database": "heroku_b0f466ca53b6b88",
+    "host": "us-cdbr-east-04.cleardb.com",
     "port": "3306"
 });
 
