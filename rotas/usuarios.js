@@ -54,7 +54,7 @@ router.post('/cadastrar_usuario', (req, res, next) => {
                                 res.status(201).send({
                                     status: true,
                                     msg: 'Inserido com sucesso!',
-                                    id_livro: resultado.insertId
+                                    id_usuario: resultado.insertId
                                 });
                             }
                         );
