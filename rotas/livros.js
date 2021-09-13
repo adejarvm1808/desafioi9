@@ -6,14 +6,18 @@ const login = require('../middleware/login');
 router.post('/inserir_livro', login, (req, res, next) => {
 
     const livro = {
+
         titulo: req.body.titulo,
         autor: req.body.autor
+
     }
 
     mysql.getConnection((error, conn)=>{
+
         conn.query(
-            'INSERT INTO livros (titulo, autor) VALUES (?,?);',
-            [req.body.titulo,req.body.autor],
+
+            'INSERT INTO livros (titulo, autor, id_usuario_cadastro) VALUES (?,?,?);',
+            [req.body.titulo,req.body.autor, req.usuario.id],
             (error, resultado, field) => {
                 conn.release(); //Limpa o pool
 
