@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "us-cdbr-east-04.cleardb.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "heroku",
+            "database": "heroku_b0f466ca53b6b88",
+            "username": "b5d2134cd8e2d2",
+            "password": "5bfdec39"
+        }
+    ]
+}

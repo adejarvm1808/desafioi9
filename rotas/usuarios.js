@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('../mysql').pool;
 const bcrypt = require('bcrypt');
-const jwt =require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 router.post('/cadastrar_usuario', (req, res, next) => {
 
@@ -110,7 +110,9 @@ router.post('/login', (req, res, next) => {
 
                     if(result){
                         const token = jwt.sign({
+                            id: resultado[0].id,
                             email: resultado[0].email,
+                            nome: resultado[0].nome
 
                         },'i9_key', {
                             expiresIn: '1h'
