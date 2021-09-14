@@ -32,7 +32,7 @@ router.post('/inserir_livro', login, (req, res, next) => {
 
 });
 
-router.post('/listar_livros', (req, res, next) => {
+router.post('/listar_livros', login, (req, res, next) => {
 
     mysql.getConnection((error, conn)=>{
         conn.query(
@@ -59,7 +59,7 @@ router.post('/listar_livros', (req, res, next) => {
 
 });
 
-router.post('/inativar_livro', (req, res, next) => {
+router.post('/inativar_livro', login, (req, res, next) => {
 
     mysql.getConnection((error, conn)=>{
 
