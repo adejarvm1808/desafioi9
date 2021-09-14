@@ -89,7 +89,8 @@ router.post('/inativar_livro', login, (req, res, next) => {
                     if (resultado.id_usuario_cadastro != req.usuario.id) {
                         return res.status(409).send({
                             status: false,
-                            msg: 'Somente o usuário que cadastrou o livro pode inativá-lo!'
+                            msg: 'Somente o usuário que cadastrou o livro pode inativá-lo!',
+                            id_usuario_cadastro: resultado.id_usuario_cadastro
                         });
                     }
 
