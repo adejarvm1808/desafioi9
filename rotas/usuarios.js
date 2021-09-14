@@ -136,7 +136,5 @@ router.post('/login', (req, res, next) => {
 
 });
 
-router
-
 
 module.exports = router;
