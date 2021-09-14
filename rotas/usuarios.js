@@ -5,7 +5,13 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 router.post('/cadastrar_usuario', (req, res, next) => {
-
+    if(req.body.nome == '' || typeof(req.body.nome) === 'undefined' || req.body.email == '' || typeof(req.body.email) === 'undefined' || req.body.senha == '' || typeof(req.body.senha) === 'undefined'){
+        console.log('ccc');
+        return res.status(401).send({
+            status: false,
+            msg: 'Verifique os campos obrigatórios na documentação!'
+        });
+    }
     mysql.getConnection((error, conn)=>{
 
         //Encriptação unilateral da senha
@@ -32,7 +38,7 @@ router.post('/cadastrar_usuario', (req, res, next) => {
                     }
 
                     if(resultado.length > 0){
-                        return res.status(409).send({
+                        return res.status(401).send({
                             status: false,
                             msg: 'Usuário já cadastrado'
                         });
@@ -71,7 +77,13 @@ router.post('/cadastrar_usuario', (req, res, next) => {
 });
 
 router.post('/login', (req, res, next) => {
-
+    if(req.body.email == '' || typeof(req.body.email) === 'undefined' || req.body.senha == '' || typeof(req.body.senha) === 'undefined'){
+        console.log('ccc');
+        return res.status(401).send({
+            status: false,
+            msg: 'Verifique os campos obrigatórios na documentação!'
+        });
+    }
     mysql.getConnection((error, conn)=>{
 
         const query = 'SELECT * FROM usuarios WHERE email = ?;'
@@ -93,7 +105,7 @@ router.post('/login', (req, res, next) => {
 
                 //Verifica se o e-mail existe
                 if (resultado.length < 1) {
-                    return res.status(500).send({
+                    return res.status(401).send({
                         status: false,
                         msg: 'E-mail incorreto!'
                     });
