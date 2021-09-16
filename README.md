@@ -10,7 +10,7 @@
   </ol>
 </p>
 <br>
-<h5>Informações técnicas:</h5>
+<h3>Informações técnicas:</h3>
 <hr>
 <p>
   
