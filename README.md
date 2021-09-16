@@ -32,6 +32,7 @@
 <br>
 <hr>
 <pre>
+
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -42,6 +43,7 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
 CREATE TABLE `livros` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `autor` varchar(255) NOT NULL,
@@ -51,6 +53,7 @@ CREATE TABLE `livros` (
   `ativo` varchar(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 CREATE TABLE `movimentos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
