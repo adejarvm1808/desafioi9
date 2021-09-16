@@ -23,8 +23,10 @@ Informações técnicas:
     <li>bcrypt (Para criptografar as senhas dos usuários)</li>
     <li>express (Para estrutrua e gerenciamento de rotas)</li>
     <li>jsonwebtoken (Para criação do token de autenticação)/li>
-    <li>mysql2 (Para CRUD, optei em não escolher o sequelize para apresentar conhecimentos em SQL)/li>
+    <li>mysql2 (Para CRUD, optei em não escolher o sequelize para apresentar conhecimentos em SQL)</li>
   </ol>
 
 </p>
+<br>
+<hr>
 Link da documentação com exemplos via Postman: https://documenter.getpostman.com/view/11147383/U16onNCy
