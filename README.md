@@ -6,8 +6,25 @@
   <ol>
     <li>inserção de usuários</li>
     <li>cadastro e inativação de livros</li>
-    <li>locação e devolução de livros/li>
+    <li>locação e devolução de livros</li>
   </ol>
+</p>
+<br>
+<h3>Metodologia de gestão</h3>
+<hr>
+<p>
+  Separei em 3 ciclos sendoo eles:
+  
+  <ol>
+    <li>Estrutural (Criação do banco de dados e repositório no GitHub)/li>
+    <li>Desenvolvimento das rotas e implantação de regras de negócios</li>
+    <li>Benchmark e deploy</li>
+  </ol>
+  
+  Criei as sub-tarefas em formato de check-list dentro dos cartões
+  
+ Segue o link do quadro do trello: https://trello.com/b/uu8h7D54/desafio
+ 
 </p>
 <br>
 <h3>Informações técnicas:</h3>
