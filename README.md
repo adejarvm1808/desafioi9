@@ -10,18 +10,26 @@
   </ol>
 </p>
 <br>
-<h3>Metodologia de gestão</h3>
+<h3>Metodologia de gestão interna do desenvolvimento do projeto</h3>
 <hr>
 <p>
-  Separei em 3 ciclos sendoo eles:
+  Separei em 3 ciclos sendo eles:
   
   <ol>
-    <li>Estrutural (Criação do banco de dados e repositório no GitHub)/li>
-    <li>Desenvolvimento das rotas e implantação de regras de negócios</li>
-    <li>Benchmark e deploy</li>
+    <li>Estrutural (Criação do banco de dados e repositório no GitHub) - ETIQUETA VERDE</li>
+    <li>Desenvolvimento das rotas e implantação de regras de negócios - ETIQUETA ROXA</li>
+    <li>Benchmark e deploy ETIQUETA AZUL</li>
   </ol>
   
-  Criei as sub-tarefas em formato de check-list dentro dos cartões
+  Criei as sub-tarefas em formato de check-list dentro dos cartões, e a medida que ia concluindo as tarefas ia marcando, desta forma tinha noção do que tinha feito e do que faltava fazer.
+  
+  Criei 3 listas:
+  
+  <ol>
+    <li>Backlog (Onde criei todos os cartôes)</li>
+    <li>Em andamento (Na medida em que iniciava a execução de um cartão migrava do quadro de backlog para este, desta forma conseguia ter noção de tudo que estava em processo de desenvolvimento e o que ainda não estava)</li>
+    <li>Concluído (Na medida em que concluia a tarefa migrava do quadro "Em andamento" para este, onde acompanhava a conclusão do projeto)</li>
+  </ol>
   
  Segue o link do quadro do trello: https://trello.com/b/uu8h7D54/desafio
  
