@@ -65,6 +65,10 @@ router.get('/', login, (req, res, next) => {
                     });
                 }
 
+                if(resultado.length < 1){
+                    return res.status(204).send({});
+                }
+
                 res.status(200).send({
                     retorno: resultado
                 });
@@ -129,8 +133,8 @@ router.post('/inativar/:id_livro', login, (req, res, next) => {
 
                 if(resultado.length < 1){
 
-                    return res.status(204).send({
-                        msg: 'Livro não encontrado'
+                    return res.status(404).send({
+                        error: 'Livro não encontrado'
                     });
 
                 }else{
@@ -218,7 +222,7 @@ router.post('/locar/:id_livro', login, (req, res, next) => {
                 }
 
                 if(resultado.length < 1){
-                    return res.status(422).send({
+                    return res.status(404).send({
                         error: 'Livro não encontrado'
                     });
                 }else{
@@ -328,7 +332,7 @@ router.post('/devolver/:id_livro', login, (req, res, next) => {
                 }
 
                 if(resultado.length < 1){
-                    return res.status(422).send({
+                    return res.status(404).send({
                         error: 'Livro não encontrado'
                     });
                 }else{

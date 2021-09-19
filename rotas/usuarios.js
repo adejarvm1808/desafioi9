@@ -162,6 +162,10 @@ router.get('/historico', login, (req, res, next) => {
                     });
                 }
 
+                if(resultado.length < 1){
+                    return res.status(204).send({});
+                }
+
                 res.status(200).send({
                     retorno: resultado
                 });
