@@ -114,7 +114,7 @@ router.post('/login', (req, res, next) => {
 
                     if(err){
                         return res.status(401).send({
-                            error: 'Senha inválida!'
+                            error: err
                         });
                     }
 
@@ -155,7 +155,7 @@ router.get('/historico', login, (req, res, next) => {
             [req.usuario.id],
             (error, resultado, field) => {
                 conn.release(); //Limpa o pool
-
+                console.log('id do usuario: '+req.usuario.id);
                 if (error) {
                     return res.status(500).send({
                         error: error

@@ -95,7 +95,7 @@ router.get('/:id_livro', login, (req, res, next) => {
                 }
 
                 if(resultado.length < 1){
-                    return res.status(204).send({});
+                    return res.status(404).send({error: 'Livro não encontrado'});
                 }
 
                 res.status(200).send({
@@ -148,7 +148,7 @@ router.post('/inativar/:id_livro', login, (req, res, next) => {
                     conn.query(
 
                         'SELECT * FROM movimentos WHERE  id_livro = ? AND devolucao is null',
-                        [req.body.id_livro],
+                        [req.params.id_livro],
                         (error, resultado, field) => {
                             conn.release(); //Limpa o pool
             
@@ -169,7 +169,7 @@ router.post('/inativar/:id_livro', login, (req, res, next) => {
                                 conn.query(
 
                                     'UPDATE livros SET ativo = 0 WHERE id = ?',
-                                    [req.body.id_livro],
+                                    [req.params.id_livro],
                                     (error, resultado, field) => {
                                         conn.release(); //Limpa o pool
                         
@@ -179,7 +179,7 @@ router.post('/inativar/:id_livro', login, (req, res, next) => {
                                             });
                                         }
                         
-                                        res.status(207).send({});
+                                        res.status(204).send({});
                                     }
                                 );
                             }
