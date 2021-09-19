@@ -10,8 +10,7 @@ const jwt =require('jsonwebtoken');
         
     } catch (error) {
         return res.status(401).send({
-            status:  false,
-            msg: 'Falha na autenticação!'
+            error: 'Falha na autenticação!'
         });
     }
 

@@ -16,12 +16,10 @@ app.use((req, res, next) => {
 
 const rotasLivros = require('./rotas/livros');
 const rotasUsuarios = require('./rotas/usuarios');
-const rotasMovimentos = require('./rotas/movimentos');
 
 
-app.use('/', rotasLivros);
-app.use('/', rotasUsuarios);
-app.use('/', rotasMovimentos);
+app.use('/livros', rotasLivros);
+app.use('/usuarios', rotasUsuarios);
 
 app.use((req, res, next) => {
     const erro = new Error('Rota não encontrada');
@@ -31,12 +29,7 @@ app.use((req, res, next) => {
 
 app.use((error,req, res, next) => {
     res.status(error.status || 500);
-    return res.send({
-        erro: {
-            status: false,
-            msg: error.message
-        }
-    });
+    return res.send({error: error.message});
 });
 
 
