@@ -5,7 +5,6 @@ CREATE TABLE `usuarios` (
   `senha` varchar(255) NOT NULL,
   `dt_criacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `livros` (
